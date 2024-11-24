@@ -1,5 +1,5 @@
 ---
-
+let value = String(Astro.url) == '/login' ? '' : 'Ingresar';
 ---
 
 <header class=" shadow-gray-700 max-w-full h-[70px] py-2 bg-[#010739] flex flex-row items-center overflow-hidden 2xl:max-w-full pb-2">
@@ -18,7 +18,9 @@
             <li class="mx-4 my-6 md:my-0"><a href="#cartelera" class="text-lg font-bold hover:border-b text-white pb-2 duration-500">Cartelera</a></li>
             <li class="mx-4 my-6 md:my-0"><a href="#" class="text-lg font-bold hover:border-b text-white pb-2  duration-500">Estrenos</a></li>
             <li class="mx-4 my-6 md:my-0"><a href="#" class="text-lg font-bold hover:border-b text-white pb-2   duration-500">Contactos</a></li>
-            <li class="mx-4 my-6 md:my-0"><a href="/login" class="text-lg font-bold hover:border-b text-white pb-2  duration-500">Ingresar</a></li>
+            <li class="mx-4 my-6 md:my-0"><a href="/login" class="text-lg font-bold hover:border-b text-white pb-2  duration-500">
+            {Astro.url.pathname == '/login' ? '': 'Ingresar'}
+            </a></li>
         
         </ul>
     </nav>
